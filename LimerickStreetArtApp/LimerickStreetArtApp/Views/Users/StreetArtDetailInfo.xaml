@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages:PopupPage 
+		xmlns:Pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LimerickStreetArtApp.Views.Users.StreetArtDetailInfo">
+
+	<StackLayout VerticalOptions="CenterAndExpand" Padding="10"  BackgroundColor="WhiteSmoke" Margin="10">
+			
+				<StackLayout Orientation="Vertical">
+					<Label x:Name="Lbl_Title" Text="Title:" TextColor="{StaticResource SecondaryColor}"   />
+					<Label  x:Name="Entry_Title"   />
+				</StackLayout>
+				<StackLayout Orientation="Vertical">
+					<Label x:Name="Lbl_Street" Text="Street Address:" TextColor="{StaticResource SecondaryColor}"   />
+					<Label  x:Name="Entry_Street"   />
+				</StackLayout>
+				<StackLayout Orientation="Vertical">
+					<Label x:Name="Lbl_Time" Text="Time:" TextColor="{StaticResource SecondaryColor}"   />
+					<Label  x:Name="Entry_Time"   />
+				</StackLayout>
+				<StackLayout Orientation="Vertical">
+					<Label x:Name="Lbl_Username" Text="Username:" TextColor="{StaticResource SecondaryColor}"   />
+					<Label  x:Name="Entry_Username"   />
+				</StackLayout>
+			<StackLayout Orientation="Vertical">
+				<Label x:Name="Lbl_Latitude" Text="Latitude:" TextColor="{StaticResource SecondaryColor}"   />
+				<Label  x:Name="Entry_Latitude"   />
+			</StackLayout>
+			<StackLayout Orientation="Vertical">
+				<Label x:Name="Lbl_Longitude" Text="Longitude:" TextColor="{StaticResource SecondaryColor}"   />
+				<Label  x:Name="Entry_Longitude"   />
+			</StackLayout>
+			<Button x:Name="btn_Close" Text="Close" Clicked="btn_Close_Clicked"/>
+			
+		</StackLayout>
+   
+</Pages:PopupPage>

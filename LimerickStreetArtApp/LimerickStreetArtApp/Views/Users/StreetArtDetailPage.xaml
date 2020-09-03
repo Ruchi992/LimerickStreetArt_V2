@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d"
+			 x:Class="LimerickStreetArtApp.Views.Users.StreetArtDetailPage"
+			 xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+	<ContentPage.Content>
+		<StackLayout Padding="0,44,0,0">
+			<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+
+				<StackLayout Grid.Row="0">
+					<Grid Padding="10,0,0,0" Margin="0,0,0,10">
+						<Button HeightRequest="25" WidthRequest="25" HorizontalOptions="Start"  x:Name="btn_close"
+							 BackgroundColor="Red" ImageSource="{FontImage Glyph=X, Size=20}" FontSize="10"  FontAttributes="Bold" Clicked="btn_close_Clicked"  />
+
+						<Label x:Name="lbl_Title"   TextColor="{StaticResource PrimaryColor}"  HorizontalOptions="CenterAndExpand"/>
+					</Grid>
+				</StackLayout>
+
+				<StackLayout Padding="10" Grid.Row="1" HorizontalOptions="FillAndExpand" >
+
+					<Grid ColumnDefinitions="*">
+						<ff:CachedImage x:Name="img_Art" Aspect="AspectFit"/>
+					</Grid>
+				</StackLayout>
+				<StackLayout Grid.Row="2">
+					
+					<Button x:Name="btn_map" Text="Location on map" Clicked="btn_map_Clicked"/>
+					<Button x:Name="btn_details" Text="Details" Clicked="btn_details_Clicked"/>
+
+
+				</StackLayout>
+
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

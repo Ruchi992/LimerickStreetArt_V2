@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+			 xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="LimerickStreetArtApp.Views.Users.StreetLocationSelectionMap">
+    <ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand"  BackgroundColor="WhiteSmoke" Margin="10" >
+			<maps:Map VerticalOptions="FillAndExpand"  x:Name="map" MapType="Street" IsShowingUser="true" MapClicked="map_MapClicked"  MoveToLastRegionOnLayoutChange="True" />
+
+			<Button x:Name="SaveLocation" HorizontalOptions="Center" WidthRequest="120" Text="Save" Clicked="SaveLocation_Clicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

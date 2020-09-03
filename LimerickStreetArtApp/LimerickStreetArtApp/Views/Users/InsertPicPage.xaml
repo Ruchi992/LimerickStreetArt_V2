@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"			 
+             x:Class="LimerickStreetArtApp.Views.Users.InsertPicPage">
+	<ContentPage.Content>
+		<StackLayout Padding="10,10,10,10">
+			<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+
+				<StackLayout Grid.Row="0">
+					<Grid  >
+						<Label Text="Upload Picture" FontSize="25" HorizontalOptions="CenterAndExpand"/>
+					</Grid>
+				</StackLayout>
+
+				<StackLayout  Grid.Row="1" HorizontalOptions="FillAndExpand" >
+
+					<StackLayout  Orientation="Horizontal"  >
+						<Button Clicked="btnSelectPic_Clicked" HorizontalOptions="CenterAndExpand" Text="Gallery" Padding="10" WidthRequest="100" BackgroundColor="DeepSkyBlue" />
+						<Button Clicked="btnCapturePic_Clicked" HorizontalOptions="CenterAndExpand" Text="Camera" Padding="10" WidthRequest="100" BackgroundColor="DeepSkyBlue" />
+					</StackLayout>
+
+					<Grid ColumnDefinitions="*">
+						<Image x:Name="img_Art"  Aspect="AspectFit"/>
+					</Grid>
+				</StackLayout>
+				<StackLayout Grid.Row="2">
+					<StackLayout Orientation="Vertical">
+						<Label x:Name="Lbl_Title" Text="Title"  />
+						<Entry  x:Name="Entry_Title"  IsTextPredictionEnabled="False" />
+					</StackLayout>
+					<StackLayout Orientation="Vertical">
+						<Label x:Name="Lbl_Street" Text="Street Address"  />
+						<Entry  x:Name="Entry_Street"  IsTextPredictionEnabled="False" />
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Button  WidthRequest="100" HorizontalOptions="CenterAndExpand" x:Name="btn_Upload"
+                              Text="Upload" Clicked="btn_Upload_Clicked" FontAttributes="Bold"   VerticalOptions="CenterAndExpand" />
+						<Button   HorizontalOptions="EndAndExpand" x:Name="btn_Map"
+                              Text="Map" Clicked="btn_Map_Clicked_1" FontAttributes="Bold" BackgroundColor="DeepSkyBlue"   VerticalOptions="CenterAndExpand" />
+					</StackLayout>
+
+				</StackLayout>
+
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Pages:PopupPage 
+	xmlns:Pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+			 mc:Ignorable="d"
+			 x:Class="LimerickStreetArtApp.Views.Users.StreetArtLocation">
+
+	<StackLayout VerticalOptions="CenterAndExpand" HeightRequest="450" BackgroundColor="WhiteSmoke" Margin="10" >
+		<maps:Map VerticalOptions="StartAndExpand" HeightRequest="360" x:Name="map" MapType="Street" IsShowingUser="true" MoveToLastRegionOnLayoutChange="false" />
+		
+		<Button x:Name="ClosePopup" HorizontalOptions="Center" WidthRequest="120" Text="Close" Clicked="ClosePopup_Clicked" />
+	</StackLayout>
+
+</Pages:PopupPage>
